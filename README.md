@@ -7,5 +7,5 @@
 се състави описанието на 7-8 продукта и да се валидира чрез подходящо изграден за целта XML Schema
 документ. Създаденото XML съдържание да се представи в HTML браузер чрез CSS и XSLT, с възможност за
 сортиране на представените обекти по няколко от техните признаци.<br>
-Ресурси: http://managementhelp.org/humanresources/index.htm
+Ресурси: http://managementhelp.org/humanresources/index.htm <br>
 Бр. студенти: 2
