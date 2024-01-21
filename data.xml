@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="stylesheet.xsl"?>
+
+<!DOCTYPE catalogue [
+  <!ELEMENT catalogue (employeesList, departmentsList)>
+  <!ELEMENT employeesList (employee+)>
+  <!ELEMENT employee (personData, employeeData)>
+  <!ELEMENT personData (firstName, middleName, lastName, id, birthday, telephoneNumber, residenceData)>
+  <!ELEMENT residenceData (country, city, zipCode, address)>
+  <!ELEMENT employeeData (departmentName, workweek, salary, employmentType, positionInCompany)>
+  <!ELEMENT positionInCompany (positionName, startDate)>
+  <!ELEMENT departmentsList (department+)>
+  <!ELEMENT department (departmentName, manager)>
+  <!ELEMENT manager EMPTY>
+  <!ATTLIST manager
+    firstNameRef CDATA #REQUIRED
+    lastNameRef CDATA #REQUIRED
+    idRef CDATA #REQUIRED
+  >
+  <!ELEMENT departmentName (#PCDATA)>
+  <!ELEMENT positionName (#PCDATA)>
+  <!ELEMENT startDate (#PCDATA)>
+  <!ELEMENT country (#PCDATA)>
+  <!ELEMENT city (#PCDATA)>
+  <!ELEMENT zipCode (#PCDATA)>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT workweek (#PCDATA)>
+  <!ELEMENT salary (#PCDATA)>
+  <!ELEMENT employmentType (#PCDATA)>
+  <!ELEMENT telephoneNumber (#PCDATA)>
+  <!ELEMENT birthday (#PCDATA)>
+  <!ELEMENT id (#PCDATA)>
+  <!ELEMENT lastName (#PCDATA)>
+  <!ELEMENT middleName (#PCDATA)>
+  <!ELEMENT firstName (#PCDATA)>
+]>
+
+<catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNameSpaceSchemaLocation="schema.xsd">
+	<employeesList>
+		<employee>
+			<personData>
+				<firstName>Boril</firstName>
+				<middleName>Georgiev</middleName>
+				<lastName>Stoyanov</lastName>
+				
+				<id>14214214</id>
+				<birthday>1999-10-05</birthday>
+				<telephoneNumber>+359473829109</telephoneNumber>
+				
+				<residenceData>
+					<country>Bulgaria</country>
+					<city>Sofia</city>
+					<zipCode>1001</zipCode>
+					<address>3 Yoan Ekzarh Street</address>
+				</residenceData>
+			</personData>
+			
+			<employeeData>
+				<departmentName>Backend</departmentName>
+				<workweek>fullTime</workweek>
+				<salary>2500.00</salary>
+				<employmentType>permanent</employmentType>
+				
+				<positionInCompany>
+					<positionName>Junior Developer</positionName>
+					<startDate>2023-05-24</startDate>
+				</positionInCompany>			
+			</employeeData>			
+		</employee>
+		
+		<employee>
+			<personData>
+				<firstName>Borislav</firstName>
+				<middleName>Ivanov</middleName>
+				<lastName>Georgiev</lastName>
+				
+				<id>14214215</id>
+				<birthday>1989-05-03</birthday>
+				<telephoneNumber>+359473829110</telephoneNumber>
+				
+				<residenceData>
+					<country>Bulgaria</country>
+					<city>Sofia</city>
+					<zipCode>1019</zipCode>
+					<address>4 Kliment Ohridski Street</address>
+				</residenceData>
+			</personData>
+			
+			<employeeData>
+				<departmentName>Frontend</departmentName>
+				<workweek>partTime</workweek>
+				<salary>3000.00</salary>
+				<employmentType>intern</employmentType>
+				
+				<positionInCompany>
+					<positionName>Junior Developer</positionName>
+					<startDate>2023-12-08</startDate>
+				</positionInCompany>			
+			</employeeData>			
+		</employee>	
+
+		<employee>
+			<personData>
+				<firstName>Stoyan</firstName>
+				<middleName>Ivanov</middleName>
+				<lastName>Iliev</lastName>
+				
+				<id>14214216</id>
+				<birthday>1975-02-06</birthday>
+				<telephoneNumber>+359473829111</telephoneNumber>
+				
+				<residenceData>
+					<country>Bulgaria</country>
+					<city>Sofia</city>
+					<zipCode>1008</zipCode>
+					<address>7 Vasil Levski Street</address>
+				</residenceData>
+			</personData>
+			
+			<employeeData>
+				<departmentName>Frontend</departmentName>
+				<workweek>fullTime</workweek>
+				<salary>6500.00</salary>
+				<employmentType>shift</employmentType>
+				
+				<positionInCompany>
+					<positionName>Middle Developer</positionName>
+					<startDate>2015-06-01</startDate>
+				</positionInCompany>			
+			</employeeData>			
+		</employee>
+		
+		<employee>
+			<personData>
+				<firstName>Ivan</firstName>
+				<middleName>Plamenov</middleName>
+				<lastName>Petrov</lastName>
+				
+				<id>14214217</id>
+				<birthday>2001-10-05</birthday>
+				<telephoneNumber>+359473829131</telephoneNumber>
+				
+				<residenceData>
+					<country>Bulgaria</country>
+					<city>Sofia</city>
+					<zipCode>1005</zipCode>
+					<address>10 Hitur Petur Street</address>
+				</residenceData>
+			</personData>
+			
+			<employeeData>
+				<departmentName>Backend</departmentName>
+				<workweek>partTime</workweek>
+				<salary>4000.00</salary>
+				<employmentType>intern</employmentType>
+				
+				<positionInCompany>
+					<positionName>Trainee Developer</positionName>
+					<startDate>2021-08-08</startDate>
+				</positionInCompany>			
+			</employeeData>			
+		</employee>
+		
+		<employee>
+			<personData>
+				<firstName>Plamena</firstName>
+				<middleName>Plamenova</middleName>
+				<lastName>Aleksandrova</lastName>
+				
+				<id>14214218</id>
+				<birthday>2002-04-15</birthday>
+				<telephoneNumber>+35947382954</telephoneNumber>
+				
+				<residenceData>
+					<country>Bulgaria</country>
+					<city>Sofia</city>
+					<zipCode>1005</zipCode>
+					<address>24 Hristo Botev Street</address>
+				</residenceData>
+			</personData>
+			
+			<employeeData>
+				<departmentName>Admin</departmentName>
+				<workweek>fullTime</workweek>
+				<salary>4300.00</salary>
+				<employmentType>permanent</employmentType>
+				
+				<positionInCompany>
+					<positionName>Office assistant</positionName>
+					<startDate>2021-12-10</startDate>
+				</positionInCompany>			
+			</employeeData>			
+		</employee>
+		
+		<employee>
+			<personData>
+				<firstName>Plamen</firstName>
+				<middleName>Plamenov</middleName>
+				<lastName>Rusenov</lastName>
+				
+				<id>14214219</id>
+				<birthday>1991-06-11</birthday>
+				<telephoneNumber>+35947382101</telephoneNumber>
+				
+				<residenceData>
+					<country>Bulgaria</country>
+					<city>Sofia</city>
+					<zipCode>1003</zipCode>
+					<address>23 Georgi Benkovski Street</address>
+				</residenceData>
+			</personData>
+			
+			<employeeData>
+				<departmentName>Backend</departmentName>
+				<workweek>fullTime</workweek>
+				<salary>5000.00</salary>
+				<employmentType>shift</employmentType>
+				
+				<positionInCompany>
+					<positionName>Middle Developer</positionName>
+					<startDate>2022-01-10</startDate>
+				</positionInCompany>			
+			</employeeData>			
+		</employee>
+		
+		<employee>
+			<personData>
+				<firstName>Kostadin</firstName>
+				<middleName>Todorov</middleName>
+				<lastName>Dimitrov</lastName>
+				
+				<id>14214220</id>
+				<birthday>1992-02-10</birthday>
+				<telephoneNumber>+35947382111</telephoneNumber>
+				
+				<residenceData>
+					<country>Bulgaria</country>
+					<city>Sofia</city>
+					<zipCode>1015</zipCode>
+					<address>20 Ivan Vazov Street</address>
+				</residenceData>
+			</personData>
+			
+			<employeeData>
+				<departmentName>Frontend</departmentName>
+				<workweek>fullTime</workweek>
+				<salary>6250.00</salary>
+				<employmentType>permanent</employmentType>
+				
+				<positionInCompany>
+					<positionName>Senior Developer</positionName>
+					<startDate>2019-03-15</startDate>
+				</positionInCompany>			
+			</employeeData>			
+		</employee>
+		
+		<employee>
+			<personData>
+				<firstName>Dimitar</firstName>
+				<middleName>Nikolov</middleName>
+				<lastName>Yavorov</lastName>
+				
+				<id>14214221</id>
+				<birthday>1980-12-12</birthday>
+				<telephoneNumber>+35947382888</telephoneNumber>
+				
+				<residenceData>
+					<country>Bulgaria</country>
+					<city>Sofia</city>
+					<zipCode>1021</zipCode>
+					<address>27 Paisii Hilendarski Street</address>
+				</residenceData>
+			</personData>
+			
+			<employeeData>
+				<departmentName>Backend</departmentName>
+				<workweek>fullTime</workweek>
+				<salary>9000.00</salary>
+				<employmentType>permanent</employmentType>
+				
+				<positionInCompany>
+					<positionName>Team Leader</positionName>
+					<startDate>2015-10-18</startDate>
+				</positionInCompany>			
+			</employeeData>			
+		</employee>
+	</employeesList>
+	
+	<departmentsList>
+        <department>
+            <departmentName>Frontend</departmentName>
+            <manager firstNameRef="Kostadin" lastNameRef="Dimitrov" idRef="14214220"/>
+        </department>
+        <department>
+            <departmentName>Backend</departmentName>
+            <manager firstNameRef="Dimitar" lastNameRef="Yavorov" idRef="14214221"/>
+        </department>
+        <department>
+            <departmentName>Admin</departmentName>
+            <manager firstNameRef="Plamena" lastNameRef="Aleksandrova" idRef="14214218"/>
+        </department>
+    </departmentsList>	
+</catalogue>
