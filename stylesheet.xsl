@@ -46,18 +46,18 @@
                 }
               }
             }
+		
+	function showEmployees() {
+		document.getElementById("employeeTable").style.display = "table";
+		document.getElementById("departmentsContainer").style.display = "none";
+		document.getElementById("sortingContainer").style.display = "block";
+	}
 
-            function showEmployees() {
-              document.getElementById("employeeTable").style.display = "table";
-              document.getElementById("departmentsContainer").style.display = "none";
-			  document.getElementById("sortingContainer").style.display = "block";
-			}
-
-            function showDepartments() {
-			  document.getElementById("employeeTable").style.display = "none";
-			  document.getElementById("departmentsContainer").style.display = "block";
-			  document.getElementById("sortingContainer").style.display = "none";
-			}
+	function showDepartments() {
+		document.getElementById("employeeTable").style.display = "none";
+		document.getElementById("departmentsContainer").style.display = "block";
+		document.getElementById("sortingContainer").style.display = "none";
+	}
 
           ]]>
         </script>
