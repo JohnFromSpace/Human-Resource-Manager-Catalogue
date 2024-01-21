@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <!-- Define types -->
+  <xs:simpleType name="dateType">
+    <xs:restriction base="xs:date"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="decimalType">
+    <xs:restriction base="xs:decimal"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="phoneType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\+\d{1,}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Define elements -->
+  <xs:element name="catalogue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="employeesList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="employee" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="personData" type="personDataType"/>
+                    <xs:element name="employeeData" type="employeeDataType"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="departmentsList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="department" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="departmentName" type="xs:string"/>
+                    <xs:element name="manager" type="managerType"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="personDataType">
+    <xs:sequence>
+      <xs:element name="firstName" type="xs:string"/>
+      <xs:element name="middleName" type="xs:string"/>
+      <xs:element name="lastName" type="xs:string"/>
+      <xs:element name="id" type="xs:string"/>
+      <xs:element name="birthday" type="dateType"/>
+      <xs:element name="telephoneNumber" type="phoneType"/>
+      <xs:element name="residenceData" type="residenceDataType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="residenceDataType">
+    <xs:sequence>
+      <xs:element name="country" type="xs:string"/>
+      <xs:element name="city" type="xs:string"/>
+      <xs:element name="zipCode" type="xs:string"/>
+      <xs:element name="address" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="employeeDataType">
+    <xs:sequence>
+        <xs:element name="departmentName" type="xs:string"/>
+        <xs:element name="workweek" type="xs:string"/>
+        <xs:element name="salary" type="decimalType"/>
+        <xs:element name="employmentType" type="xs:string"/>
+        <xs:element name="positionInCompany" type="positionType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="positionType">
+    <xs:sequence>
+      <xs:element name="positionName" type="xs:string"/>
+      <xs:element name="startDate" type="dateType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="managerType">
+    <xs:attribute name="firstNameRef" type="xs:string" use="required"/>
+    <xs:attribute name="lastNameRef" type="xs:string" use="required"/>
+    <xs:attribute name="idRef" type="xs:string" use="required"/>
+  </xs:complexType>
+
+</xs:schema>
